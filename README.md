@@ -7,3 +7,4 @@ This repository contains solutions to coding problems based on Data Structres an
   - [Leetcode 159. Longest Substring With At Most 2 Distict Characters](Longest_Substring_With_Atmost_Two_Distinct_Characters.java)
   - [Leetcode 3. Longest Substring Without Repeating Characters](Longest_Substring_Without_Repeating_Characters.java)
   - [Leetcode 424. Longest Repeating Character Replacement](Longest_Repeating_Character_Replacement.java)
+  - [Leetcode 567. Permutation in String](Permutation_in_String.java)

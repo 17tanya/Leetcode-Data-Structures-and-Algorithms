@@ -1,9 +1,9 @@
 # Leetcode / Data-Structures-and-Algorithms
 This repository contains solutions to coding problems based on Data Structures and Algorithms.
 ## Graphs, DFS & BFS
-  - [547. Friend Circles](Graphs, DFS & BFS/Friend_Circles.java)
-  - [200. Number of Islands](Graphs, DFS & BFS/Number_of_Islands.java)
-  - [133. Clone Graph](Graphs, DFS & BFS/Clone_Graph.java)
+  - [547. Friend Circles](Graphs,DFS&BFS/Friend_Circles.java)
+  - [200. Number of Islands](Graphs,DFS&BFS/Number_of_Islands.java)
+  - [133. Clone Graph](Graphs,DFS&BFS/Clone_Graph.java)
 ## Sliding Window Problems
   - [Leetcode 438. Find All Anagrams In a String](SlidingWindow/Find_All_Anagarms_In_A_String.java)
   - [Leetcode 78. Minimum Window Substring](SlidingWindow/Minimum_Window_Substring.java)

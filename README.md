@@ -1,4 +1,4 @@
-# Data-Structures-and-Algorithms
+# Leetcode / Data-Structures-and-Algorithms
 This repository contains solutions to coding problems based on Data Structures and Algorithms.
 ## Graphs, DFS & BFS
   - [547. Friend Circles](Friend_Circles.java)

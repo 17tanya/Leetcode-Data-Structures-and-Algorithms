@@ -2,6 +2,7 @@
 This repository contains solutions to coding problems based on Data Structures and Algorithms.
 ## Graphs, DFS & BFS
   - [547. Friend Circles](Friend_Circles.java)
+  - [200. Number of Islands](Number_of_Islands.java)
 ## Sliding Window Problems
   - [Leetcode 438. Find All Anagrams In a String](Find_All_Anagarms_In_A_String.java)
   - [Leetcode 78. Minimum Window Substring](Minimum_Window_Substring.java)

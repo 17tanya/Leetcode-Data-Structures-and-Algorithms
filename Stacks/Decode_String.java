@@ -1,3 +1,6 @@
+//Leetcode 394. Decode String
+//Question - https://leetcode.com/problems/decode-string/
+
 /*How to approach this problem?
 1. Need to analyse the entire string ==> iteration
 2. Involves parantheses which can also be nested ==> solve the innermost parentheses first ==> Go deep in the string to find the innermost parentheses ==> similar to depth first approach

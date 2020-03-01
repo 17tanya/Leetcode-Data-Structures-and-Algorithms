@@ -6,7 +6,7 @@ This repository contains solutions to coding problems based on Data Structures a
   - [133. Clone Graph](GraphsDFS&BFS/Clone_Graph.java)
   - [102. Binary Tree Level Order Traversal](GraphsDFS&BFS/Binary_Tree_Level_Order_Traversal.java)
 ## Stacks
-  - [394. Decode String](https://leetcode.com/problems/decode-string/)
+  - [394. Decode String](Stacks/Decode_String.java)
 ## Linked Lists
   - [19. Remove Nth Node From End of List](LinkedList/Remove_Nth_Node_From_End_of_List.java)
 ## Sliding Window

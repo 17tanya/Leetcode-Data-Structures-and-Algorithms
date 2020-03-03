@@ -3,40 +3,30 @@
 
 class Solution {
     public int findJudge(int N, int[][] trust) {
-        ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+        if(N==1) return 1;
+        int trusted[] = new int[N+1];
         
-        int n = trust.length;
+        for(int i=0 ; i<trust.length ; i++){
+            trusted[trust[i][1]]++;
+        }
+        
+        int possibleJudge = -1;
         
         for(int i=0;i<=N;i++){
-            list.add(new ArrayList<Integer>());
-        }
-        
-        for(int i=0;i<n;i++){
-            int u = trust[i][0];
-            int v = trust[i][1];
-            
-            list.get(u).add(v);
-            
-        }
-        
-        ArrayList<Integer> inDegZero = new ArrayList<Integer>();
-        for(int i=1;i<=N;i++){
-            if(list.get(i).size()==0){
-                inDegZero.add(i);
+            if(trusted[i]==N-1){
+                if(possibleJudge==-1){
+                    possibleJudge = i;
+                }
+                else return -1; //only the judge can have indegree=N-1
+                //if more than one people satisfy this condition then their is NO judge
             }
         }
         
-        int flag = 0;
-        int curr = -1;
-        for(int i=0;i<inDegZero.size();i++){
-            curr = inDegZero.get(i);
-            flag = 0;
-            for(int j=1;j<=N;j++){
-                if(list.get(j).contains(curr)) flag++;
-            }
-            if(flag==N-1) break;
+        //check that possibleJudge doesn't trust anyone
+        for(int i=0;i<trust.length;i++){
+            if(trust[i][0]==possibleJudge) return -1;
         }
-        if(flag==N-1) return curr;
-        else return -1;
+        
+        return possibleJudge;
     }
 }

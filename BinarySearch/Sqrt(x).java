@@ -1,5 +1,6 @@
 //Leetcode 69. Sqrt(x)
 //Question - https://leetcode.com/problems/sqrtx/
+//Further Reading - Newton's root-finding algorithm
 
 /*Implement int sqrt(int x).
 

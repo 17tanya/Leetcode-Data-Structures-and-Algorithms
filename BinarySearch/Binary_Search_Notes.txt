@@ -1,0 +1,110 @@
+Finding a value in a sorted sequence
+binary search is used to quickly find a value in a sorted sequence.Binary search maintains a contiguous subsequence of the starting sequence where the target value is surely located.
+This is called the search space.
+The search space is initially the entire sequence.
+At each step, the algorithm compares the median value in the search space to the target value.
+Based on the comparison and because the sequence is sorted, it can then eliminate half of the search space.
+By doing this repeatedly, it will eventually be left with a search space consisting of a single element, the target value.*/
+
+binary_search(A, target):
+   lo = 1, hi = size(A)
+   while lo &lt;= hi:
+      mid = lo + (hi-lo)/2if A[mid] == target:
+         return mid            
+      else if A[mid] &lt; target: 
+         lo = mid+1else:
+         hi = mid-1// target was not found
+
+Complexity
+Since each comparison binary search uses halves the search space,
+we can assert and easily prove that binary search will never use more than (in big-oh notation) O(log N) comparisons
+to find the target value.
+The logarithm is an awfully slowly growing function.
+In case you’re not aware of just how efficient binary search is, consider looking up a name in a phone book containing a million names.
+Binary search lets you systematically find any given name using at most 21 comparisons. 
+
+Binary search in standard libraries
+Java has a built-in Arrays.binary_search method for arrays.
+
+Beyond arrays: the discrete binary search
+A sequence (array) is really just a function which associates integers (indices) with the corresponding values. 
+we can use the same algorithm described above on any monotonic function f whose domain is the set of integers.
+The only difference is that we replace an
+*******array lookup with a function evaluation: we are now looking for some x such that f(x) is equal to the target value.
+The search space is now more formally a subinterval of the domain of the function, while the target value is an element of the codomain.******* 
+
+Taking it further: the main theorem
+When you encounter a problem which you think could be solved by applying binary search, you need some way of proving it will work.
+Consider a predicate p defined over some ordered set S (the search space).
+The search space consists of candidate solutions to the problem.
+In this article, a predicate is a function which returns a boolean value, true or false (we’ll also use yes and no as boolean values).
+We use the predicate to verify if a candidate solution is legal (does not violate some constraint) according to the definition of the problem.
+
+*******"binary search can be used if and only if for all x in S, p(x) implies p(y) for all y > x.
+This property is what we use when we discard the second half of the search space.
+It is equivalent to saying that ¬p(x) implies ¬p(y) for all y < x (the symbol ¬ denotes the logical not operator), which is what we use when we discard the first half of the search space."*******
+
+******* We can have it find either the first x for which p(x) is true or the last x for which p(x) is false.
+The difference between the two is only slight, as you will see, but it is necessary to settle on one.*******
+
+case 1: first x for which p(x) is true
+
+binary_search(lo, hi, p):
+   while lo &lt; hi:
+      mid = lo + (hi-lo)/2if p(mid) == true:
+         hi = mid
+      else:
+         lo = mid+1if p(lo) == false:
+      complain                // p(x) is false for all x in S!
+      
+   return lo         // lo is the least x for which p(x) is true
+   
+The two crucial lines are hi = mid and lo = mid+1.
+When p(mid) is true, we can discard the second half of the search space, since the predicate is true for all elements in it (by the main theorem).
+However, we can not discard mid itself, since it may well be the first element for which p is true.    
+
+case 2: last x for which p(x) is false
+// warning: there is a nasty bug in this snippet!
+binary_search(lo, hi, p):
+   while lo &lt; hi:
+      mid = lo + (hi-lo)/2    // note: division truncates
+      if p(mid) == true:
+         hi = mid-1else:
+         lo = mid
+          
+   if p(lo) == true:
+      complain                // p(x) is true for all x in S!
+      
+   return lo         // lo is the greatest x for which p(x) is false
+   
+You can verify that this satisfies our condition that the element we’re looking for always be present in the interval (lo, hi). However, there is another problem. Consider what happens when you run this code on some search space for which the predicate gives:
+
+          | no | yes | 
+
+*******The code will get stuck in a loop.
+It will always select the first element as mid, but then will not move the lower bound because it wants to keep the no in its search space.
+The solution is to change mid = lo + (hi-lo)/2 to mid = lo + (hi-lo+1)/2, i.e. so that it rounds up instead of down.
+Just remember to always test your code on a two-element set where the predicate is false for the first element and true for the second.*******
+
+You may also wonder as to why mid is calculated using mid = lo + (hi-lo)/2 instead of the usual mid = (lo+hi)/2.
+This is to avoid another potential *******rounding bug: in the first case, we want the division to always round down, towards the lower bound.
+But division truncates, so when lo+hi would be negative, it would start rounding towards the higher bound.*******
+Coding the calculation this way ensures that the number divided is always positive and hence always rounds as we want it to.
+Although the bug doesn’t surface when the search space consists only of positive integers or real numbers
+
+
+Real Numbers
+binary_search(lo, hi, p):
+   while we choose not to terminate:
+      mid = lo + (hi-lo)/2if p(mid) == true:
+         hi = mid
+      else:
+         lo = mid
+          
+   return lo // lo is close to the border between <i>no</i> and <i>yes</i>
+   
+   Since the set of real numbers is dense, it should be clear that we usually won’t be able to find the exact target value.
+   However, we can quickly find some x such that f(x) is within some tolerance of the border between no and yes.
+   On Topcoder, your best bet is to just use a few hundred iterations, this will give you the best possible precision without too much thinking.
+   100 iterations will reduce the search space to approximately 10-30 of its initial size, which should be enough for most (if not all) problems.
+   

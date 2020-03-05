@@ -1,3 +1,5 @@
+//Reference - https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
+
 Finding a value in a sorted sequence
 binary search is used to quickly find a value in a sorted sequence.Binary search maintains a contiguous subsequence of the starting sequence where the target value is surely located.
 This is called the search space.

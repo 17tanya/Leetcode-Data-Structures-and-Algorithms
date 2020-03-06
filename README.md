@@ -28,7 +28,7 @@ This repository contains solutions to coding problems based on Data Structures a
   - [Binary Search Topcoder Notes](BinarySearch/Binary_Search_Notes.txt)
   - [Binary Search Variants](BinarySearch/Binary_Search_Variants.java)
   - [Leetcode 1351. Count Negative Numbers in a Sorted Matrix](BinarySearch/Count_Negative_Numbers_in_a_Sorted_Matrix.java)
-  - [Leetcode 153. Find Minimum in Rotated Sorted Array](BinarySearch/Find_Minimum in_Rotated_Sorted_Array.java)
+  - [Leetcode 153. Find Minimum in Rotated Sorted Array ](BinarySearch/Find_Minimum in_Rotated_Sorted_Array.java)
   - [Leetcode 162. Find Peak Element](BinarySearch/Find_Peak_Element.java)
   - [Leetcode 278. First Bad Version](BinarySearch/First_Bad_Version.java)
   - [Leetcode 374. Guess Number Higher or Lower](BinarySearch/Guess_Number_Higher_or_Lower.java)

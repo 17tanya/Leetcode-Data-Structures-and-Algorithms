@@ -1,10 +1,10 @@
 # Leetcode / Data-Structures-and-Algorithms
 This repository contains solutions to coding problems based on Data Structures and Algorithms.
 ## Graphs, DFS & BFS
-  - [547. Friend Circles](GraphsDFS&BFS/Friend_Circles.java)
-  - [200. Number of Islands](GraphsDFS&BFS/Number_of_Islands.java)
-  - [133. Clone Graph](GraphsDFS&BFS/Clone_Graph.java)
-  - [102. Binary Tree Level Order Traversal](GraphsDFS&BFS/Binary_Tree_Level_Order_Traversal.java)
+  - [Leetcode 547. Friend Circles](GraphsDFS&BFS/Friend_Circles.java)
+  - [Leetcode 200. Number of Islands](GraphsDFS&BFS/Number_of_Islands.java)
+  - [Leetcode 133. Clone Graph](GraphsDFS&BFS/Clone_Graph.java)
+  - [Leetcode 102. Binary Tree Level Order Traversal](GraphsDFS&BFS/Binary_Tree_Level_Order_Traversal.java)
   - [Topological Sort - DFS](GraphsDFS&BFS/TopologicalSort_DFS.java)
   - [Topological Sort - Kahn](GraphsDFS&BFS/KahnTopologicalSort.java)
   - [Leetcode 207. Course Schedule](GraphsDFS&BFS/Course_Schedule.java)
@@ -14,9 +14,9 @@ This repository contains solutions to coding problems based on Data Structures a
   - [Leetcode 230. Kth Smallest Element in a BST](Trees/Kth_Smallest_Element_in_a_BST.java)
   - [Leetcode 98. Validate Binary Search Tree](Trees/Validate_Binary_Search_Tree.java)
 ## Stacks
-  - [394. Decode String](Stacks/Decode_String.java)
+  - [Leetcode 394. Decode String](Stacks/Decode_String.java)
 ## Linked Lists
-  - [19. Remove Nth Node From End of List](LinkedList/Remove_Nth_Node_From_End_of_List.java)
+  - [Leetcode 19. Remove Nth Node From End of List](LinkedList/Remove_Nth_Node_From_End_of_List.java)
 ## Sliding Window
   - [Leetcode 438. Find All Anagrams In a String](SlidingWindow/Find_All_Anagarms_In_A_String.java)
   - [Leetcode 78. Minimum Window Substring](SlidingWindow/Minimum_Window_Substring.java)
@@ -28,7 +28,7 @@ This repository contains solutions to coding problems based on Data Structures a
   - [Binary Search Topcoder Notes](BinarySearch/Binary_Search_Notes.txt)
   - [Binary Search Variants](BinarySearch/Binary_Search_Variants.java)
   - [Leetcode 1351. Count Negative Numbers in a Sorted Matrix](BinarySearch/Count_Negative_Numbers_in_a_Sorted_Matrix.java)
-  - [Leetcode 153. Find Minimum in Rotated Sorted Array ](BinarySearch/Find_Minimum in_Rotated_Sorted_Array.java)
+  - [Leetcode 153. Find Minimum in Rotated Sorted Array](BinarySearch/Find_Minimum in_Rotated_Sorted_Array.java)
   - [Leetcode 162. Find Peak Element](BinarySearch/Find_Peak_Element.java)
   - [Leetcode 278. First Bad Version](BinarySearch/First_Bad_Version.java)
   - [Leetcode 374. Guess Number Higher or Lower](BinarySearch/Guess_Number_Higher_or_Lower.java)

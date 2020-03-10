@@ -38,6 +38,7 @@ This repository contains solutions to coding problems based on Data Structures a
   - [Leetcode 69. Sqrt(x)](BinarySearch/Sqrt(x).java)
 ## Arrays
   - [Leetcode 48. Rotate Image](Arrays/Rotate_Image.java)
+  - [Leetcode 41. First Missing Positive](Arrays/First_Missing_Positive.java)
   
  ## Submission For Google Hash Code 2020 Online Qualification Round
  [Google Hash Code 2020 Submission](Google_Hash_Code_2020.java)

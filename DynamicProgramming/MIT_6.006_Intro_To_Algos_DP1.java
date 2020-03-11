@@ -47,4 +47,34 @@ class fib{
 5. time = theta(n)
 */
 
+/*
+DP ~ Memoization + Recursion
+    1. memoize recursion (remember)
+    2. re-use solutions to sub problems
+    3. Time = (number of subproblems) * (time to solve earch subproblem)
+       NOTE - Do not count memoized recursions
+*/
+
+//Bottom-up DP algorithm
+class fib{
+    HashMap<Integer,Integer> memo = new HashMap<Integer,Integer>();
+    
+    public int fibonacci(int n){
+        int f = 0;
+        for(int k=1; k<=n ; k++){
+            if(k<=2) f = 1;
+            else f = memo.get(n-1) + memo.get(n-2);
+            
+            memo.put(k,f);
+        }
+        
+        return memo.get(n);
+    }
+}
+
+/*
+1. Bottom-up approach does the exact same computation as memoized approach.
+2. Here we are doing a TOPOLOGICAL SORT of subproblem dependency DAG.
+3. Often takes uses less space
+*/
 

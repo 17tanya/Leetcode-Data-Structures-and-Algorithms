@@ -1,4 +1,7 @@
-/*It's especially good, and intended for, optimizationproblems, things like shortest paths. You want to find the best way to do something.
+//MIT OpenCourseWare - https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19
+
+/*
+It's especially good, and intended for, optimizationproblems, things like shortest paths. You want to find the best way to do something.
 Shortest path is you want to find the shortest path, the minimum-length path. You want to minimize, maximize something, that's an optimization problem
 You can also think of dynamic programming as a kind of exhaustive search. Which is usually a bad thing to do because it leads to exponential time.
 But if you do it in a clever way, via dynamic programming, you typically get polynomial time. 

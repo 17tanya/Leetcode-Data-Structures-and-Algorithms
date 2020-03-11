@@ -78,3 +78,31 @@ class fib{
 3. Often takes uses less space
 */
 
+//SHORTEST PATHS
+/*
+Guessing - Don't know the answer - guess. Try ALL guesses and take the BEST ONE.
+DP ~ Recursion + memoization + Guessing
+
+Consider a graph
+(S) --> () --> () --> (U) --> (V)
+We have multiple incoming edges on (V)
+Guess all the possible incoming edges to v, and then recursively compute the shortest path from s to u. 
+And then add on the edge v. 
+
+delta(S,V) = min(u,v) belongs to E (delta(S,U) + w(U,V))
+delta(S,U) is a recursive call
+
+Time complexity is definitely going to be exponential without memoization. But we know. We know how to make algorithms better. We memoize. 
+To define the function delta of sv, you first check, is s comma v in the memo table? If so return that value.
+Otherwise, do this computation where this is a recursive call and then stored it in the memo table. 
+
+see 41:14 for the graph
+This algorithm will take INFINITE time on graphs with cycle.
+For Directed Acyclic Graph : theta(V + E)
+time for each subproblem delta(S,V) = indegree(V) + 1
+total time = summation(for all vertices) [indgree(V) + 1] = theta(V+E)
+
+!!!!SUBPROBLEM DEPENDENCIES SHOULD BE ACYCLIC FOR MEMOIZATION TO WORK!!!! - can be related to the bottom-up approach which uses 
+topological sort of subproblem dependency - DAG
+*/
+

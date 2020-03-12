@@ -88,4 +88,18 @@ Do DP simultaneoulsy on x and y. Look at SUFFIXES of x and y to make the subprob
    The above described approach is the best in terms of time ==> Quadratic in time and space
    Better approach ==> Quadratic time and linear space
 
+EDIT DISTANCE CAN BE USED FOR LCS(LEAST COMMON SUBSEQUENCE) AND DNA MUTATION
+
+
+KNAPSACK PROBLEM
+DP Approach - 
+1. Subproblems - suffix[i:] of items. Each subproblem needs to have 2 kinds of information - item index and remaining capacity.
+   number of subproblems = theta(nS)
+   n ==> num of items
+   S ==> capacity of knapsack
+2. Guessing - is item i in knapsack or not? we have 2 choices.
+3. Recurrence - 
+   DP(i,X) = max{ DP(i+1,X), DP(i+1,X-Si) + Vi }
+   Time = theta(nS)
+   NOT POLYNOMIAL TIME ==> PSUEDOPOLYNOMIAL TIME
 */

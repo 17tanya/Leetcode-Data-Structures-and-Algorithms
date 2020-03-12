@@ -21,4 +21,15 @@ Time  = (number of subproblems)*(time per subproblem)
             OR           ==> check subproblem reccurence is acyclic ie. has topological order
      Build DP table Bottom-up (using loops - more practical and faster)
   5. Solve orignal problem ==> total time
+  
+  
+Mapping Relation with examples
+                                    Fibonacci                              Shortest Paths
+1. Subproblems                  F(k) for k=1....n           delta(k)(s,v) for v belonds to V, 0<=k<=|V|
+   number of subproblems                n                                      V^2
+2. Guess                             nothing                           edge into v (if any)
+   number of choices                    1                                 indegree(v)+1
+3. Recurrence                   F(k)=F(k-1)+F(k-2)          delta(k)(s,v)=min{delta(k-1)(s,u) + w(u,v) | (u,v) belongs to E}
+   time/subproblem                  theta(1)                             theta(indegree(v)+1)
+4. Topological Order              for k=1.....n                for k=0,1....|V|-1 for v belongs to V
 */

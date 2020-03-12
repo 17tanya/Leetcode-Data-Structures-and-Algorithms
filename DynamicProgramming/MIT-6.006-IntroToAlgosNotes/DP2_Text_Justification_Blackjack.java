@@ -1,6 +1,7 @@
 //MIT OpenCourseWare - https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=21&t=107s
 
 /*
+REVISION
 How to interpret DP?
 1. DP ~ Carefull Brute Force
 2. DP ~ Guessing + Recursion + Memoization
@@ -32,4 +33,29 @@ Mapping Relation with examples
 3. Recurrence                   F(k)=F(k-1)+F(k-2)          delta(k)(s,v)=min{delta(k-1)(s,u) + w(u,v) | (u,v) belongs to E}
    time/subproblem                  theta(1)                             theta(indegree(v)+1)
 4. Topological Order              for k=1.....n                for k=0,1....|V|-1 for v belongs to V
+*/
+
+
+//TEXT JUSTIFICATION
+/*
+Problem - Split text into "good" lines
+          text is a list of words
+          badness(i,j) ==> indicates how BAD would it be to use the words[i,j-1] in one line.
+          badness(i,j) = (page width - total width)^3 or infinity
+
+We can use a Greedy approach but this is not optimal because the first few lines might look good but the last few lines
+might look bad. in the greedy algorithm, you make the first line as good as you can. But it might actually be better to leave out
+some of the words that would fit here in order to make the next line better. 
+
+example - 
+aaaaaa aaaaaa aaaaaa aaaaaa
+aaaaaa aaaaaa aaa aaaa aa
+aaaaaaaaaaaa         aaaaaa
+aa                       aa
+
+Solution would be to minimize the sum of the badnesses of the lines.
+
+BRUTE FORCE APPROACH - Exponential time
+For each word, guess if it starts a line or not. For n words, we will have 2^n different splits.
+For every word I say yes or no, does this is begin a line? So what I'd like to figure out is where those lines begin. 
 */

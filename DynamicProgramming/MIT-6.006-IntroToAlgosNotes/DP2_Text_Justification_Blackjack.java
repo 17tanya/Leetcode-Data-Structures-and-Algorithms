@@ -58,4 +58,22 @@ Solution would be to minimize the sum of the badnesses of the lines.
 BRUTE FORCE APPROACH - Exponential time
 For each word, guess if it starts a line or not. For n words, we will have 2^n different splits.
 For every word I say yes or no, does this is begin a line? So what I'd like to figure out is where those lines begin. 
+
+DP Solution for Text Justification
+1. Subproblems - suffix[i:] ==> indicates that word i is used as the first word of the current line and the remaining words from                        i onwards can be considered to chose the first word for the next line.
+number of subproblems = n
+2. Guesses - Where to start the next line
+number of guesses <= n-i = O(n)
+3. Recurrence (This recurrence returns the COST and not the actual word - for that we use Parent Pointers)
+DP(i) = min(DP(j) + badness(i,j), for j in range(i+1,n+1))
+time/subproblem = O(n)
+4. Topological Order - n,n-1,n-2,......0
+Total time = (num. of subproblems)*(time/subproblem) = theta(n^2)
+5. Original Problem - DP(0)
+
+Parent Pointers to store the solution which gave us the minimum cost
+These help us to remember which guess was the best.
+parent[i] = argmin(......) = j
+
+to see the line-break words we call ==> 0 --> parent[0] --> parent[parent[0]] --> .....
 */

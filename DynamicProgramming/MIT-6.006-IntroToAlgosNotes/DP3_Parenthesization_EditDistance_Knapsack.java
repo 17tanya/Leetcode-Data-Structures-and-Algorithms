@@ -1,7 +1,9 @@
 /*
 SUBPROBLEMS FOR STRINGS/SEQUENCES - 
 1. suffix     x[i:]  ==> theta(n)    for all i
+    If you always are plucking from the beginning, you have suffixes.
 2. prefix     x[:i]  ==> theta(n)    for all i
+    If you're plucking off from the end instead of the beginning, you'll end up with prefixes.
 3. substring  x[i:j] ==> theta(n^2)  for all i <= j
 
 
@@ -30,4 +32,54 @@ NOTE - This DP does not require to compute the shortest path in DAG
        Base case - DP(i,i+1) = 0 - Only one matrix, no multiplication needed, cost = 0
        See 22:40
 5. Overall Problem - DP(0,n)
+
+
+EDIT DISTANCE
+Given 2 strings x and y, what is the cheapest possible sequence of character edits to turn x --> y.
+Character edits are - 
+        1. insert a character c
+        2. delete a character c
+        3. replace a character c by c'
+The cost of each of these edits may be different
+
+
+DP Approach - 
+Do DP simultaneoulsy on x and y. Look at SUFFIXES of x and y to make the subproblems and combine these subproblems by multiplication.
+1. Subproblems - Edit Distance on x[i:] and y[j:](possibly different suffix of y)
+   Number of subproblems - n^2
+   If,
+   length(x) = n & length(y) = n
+   we have n choices for x and n choices for y. We need to consider these choices as pairs, ie n^2 pairs.
+   For different lengths, number of subproblems = theta(|x|.|y|)
+2. Guess - One of 3 possibilities
+                i. replace x[i] --> y[j], remaining substrings are x[i+1:] and y[j+1:] 
+                ii. insert y[j] in x, remaining substrings are x[i:] and y[j+1:]
+                iii. delete x[i], remaining substrings are x[i+1:] and y[j:]
+3. Recurrence - 
+   DP(i,j) = min{ (cost of replace x[i] --> y[j]) + DP(i+1,j+1),
+                  (cost of insert y[j]) + DP(i,j+1),
+                  (cost of delete x[i]) + DP(i+1,j) }
+   where, DP(i,j) indicates suffix x[i:] and y[j:]
+4. Topological Sort - 
+        Bottom up approach
+        for i = |x|...0 :
+            for j = |y|...0 :
+    DP with shortest path in DAG, where DAG is a 2D matrix in which i represents rows and j represents columns.
+    i ranges from [0...|x|] and j ranges from [0...|y|].
+    each of the cells in the matrix represents a node in the DAG. The value of the node(cell) depends on 3 adjacent cells
+    
+        0 <-- j -->      |y|
+        ____________________
+     0  |  ____            |
+        |  |__|<           |
+     x  |    ^ \           |
+        |                  |
+        |__________________|
+        
+        where, < represents an edge from the left cell to the current cell ==> cost of insert
+               \ represents an edge from the bottom left cell to the current cell ==> cost of replace
+               ^ represents an edge from the below cell to the current cell ==> cost of delete
+        In the matrix we need to progress towards the origin.
+        
+
 */

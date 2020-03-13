@@ -77,4 +77,33 @@ We need to find the shortest path in this DAG, the current formulation is not a 
 We are looking at all sources to find the shortest path.
 
 This can be converted to single source shortest path by using a dummy node and connecting it with all column 0 nodes with weight 0. Now, the source is this dummy node.
+
+
+
+//TETRIS TRAINING
+  - given seq of n peices
+  - must drp from top
+  - full rows don't clear
+  - can you SURVIVE? ==> THIS IS THE PROBLEM TO BE SOLVED
+  - width w is small
+  - board is initially empty
+  
+  
+DP Approach - 
+1. Subproblems - How to play? suffix[i:] with peices. Given the board skyline.
+   number of subproblems = n.((h+1)^w)
+   we have w columns and each column can have a min heigth=0 and max height=h
+   total possibilties for height for each column = (h+1)
+   num of columns = w
+   total possibilties for height for all columns = (h+1)^w
+2. Guess - How to play and where to drop the peice?
+           We can rotate the peiece in 4 ways
+           We can drop the peice at w locations
+           number of choices = 4.w
+3. Recurrence - survival is the problem. Use boolean or [0/1]
+                when using [0/1] we can maximize the recurrence
+Total Time = (num of subproblems)*(time/subproblem)
+           = n.((h+1)^w).(4.w)
+           = theta(n.w.((h+1)^w))
+   
 */

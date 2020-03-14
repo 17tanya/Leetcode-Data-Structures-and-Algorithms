@@ -105,6 +105,15 @@ class LCS{
     return lcs[n][m];
     
   }
+  
+  //to avoid duplicates
+  public Set<String> LCSset(String a, String b, int matrix[][]){
+        LCSlength(a,b,a.length(),b.length(),matrix);
+          
+        ArrayList<String> list = lcs(a,b,a.length(),b.length(),matrix);
+          
+        return new HashSet<>(list);
+  }
 
 }
 

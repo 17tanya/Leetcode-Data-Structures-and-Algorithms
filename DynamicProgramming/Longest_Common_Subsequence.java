@@ -1,3 +1,6 @@
+//GFG - https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
+//TechieDelight - https://www.techiedelight.com/longest-common-subsequence/
+
 /*
 LCS is the problem of finding longest common subsequence that is present in given two seqeunces in the SAME ORDER.
 ie. Find the longest seqeunce which can be obtained from the first original sequence by DELETING some items and from the second original sequence by deleting other items.

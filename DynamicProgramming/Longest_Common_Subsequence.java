@@ -1,6 +1,6 @@
 /*
 LCS is the problem of finding longest common subsequence that is present in given two seqeunces in the SAME ORDER.
-ie. Find the longest seqeunce which can be obtained from the first original sequence by deleting some items and from the second original sequence by deleting other items.
+ie. Find the longest seqeunce which can be obtained from the first original sequence by DELETING some items and from the second original sequence by deleting other items.
 
 example - 
 X : ABCBDAB
@@ -51,3 +51,84 @@ public int LCSlength(String a, String b, int n, int m){
     
     return Math.max(LCSlength(a,b,n,m-1),LCSlength(a,b,n-1,m));
 }
+/*
+Worst Case Time Complexity of the above solution is = O(2^(m+n))
+Worst Case is when there is NO common character in the two sequences.
+example - X : AAAA and Y : BBBBBB
+
+In the recursive solution, some subproblems are computed again ==> OVERLAPPING SUBPROBLEMS ==> DP CAN BE USED!
+*/
+
+
+//MEMOIZED RECURSIVE APPROACH - TOP DOWN APPROACH
+/*Top Down approach - Breaking Bigger problem into smaller subproblem and calculate and store the result in case it is needed in future*/
+class LCS{
+    HashMap<String,Integer> map = new HashMap<String,Integer>();
+    
+    public int LCSlength(String a, String b, int n, int m){
+        if(n==0 || m==0) return 0;
+        
+        String key = n+"|"+m;
+        if(!map.containsKey(key)){
+            if(a.charAt(n-1)==b.charAt(m-1))  map.put(key, LCSlength(a,b,n-1,m-1)+1);
+    
+            else map.put(key, Math.max(LCSlength(a,b,n,m-1),LCSlength(a,b,n-1,m)));
+        }
+        
+        return map.get(key);
+    }
+}
+
+/*
+Time Complexity - O(n*m)
+Number of unique subproblems = n*m
+Other redundant recursive calls take constant time
+Space Complexity - O(n*m)
+*/
+
+//BOTTOM-UP APPROACH 
+/*Calculate smaller value first and work towards the bigger problem.*/
+class LCS{
+    public int LCSlength(String a, String b, int n, int m){
+        int lcs[][] = new int[n+1][m+1];
+        
+        //first column of all rows is 0
+        for(int i=0;i<=n;i++) lcs[i][0] = 0;
+        //first row of all coumns is 0
+        for(int j=0;j<=m;j++) lcs[0][j] = 0;
+        
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+                /*
+                when a[i]==b[j], we can simply look for the last answer and add one to it. 
+                One is added to reflect that the current pair of characters are a match.
+                last answer is found by not considering the current elements ie. going to the upper dioagnal cell
+                */
+                if(a.charAt(i-1)==b.charAt(j-1)){
+                    lcs[i][j] = lcs[i-1][j-1]+1;
+                }
+                
+                /*
+                when a[i]!=b[j],
+                We can discard one character at a time from both the sequence to see if there is a match or not.
+                let us assume,
+                Sequence after dropping the last character = oldSeq
+                Sequence kept as it is ie. Sequence which includes the current character = newSeq
+                
+                Since we have added a new character in the newSeq, there is a possibilty that the last character of oldSeq matches the newly added last char of newSeq.
+                */
+                else{
+                    lcs[i][j] = Math.max(lcs[i-1][j], lcs[i][j-1]);
+                }
+            }
+        }
+        
+        return lcs[n][m];
+    }
+}
+/*
+Time Complexity - 
+We are computing each of the (n*m) subproblems = O(n*m)
+Space Complexity -
+Storing results of all subproblems = O(n*m)
+*/

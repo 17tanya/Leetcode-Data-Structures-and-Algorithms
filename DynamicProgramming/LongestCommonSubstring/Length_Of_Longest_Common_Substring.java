@@ -55,4 +55,12 @@ Understanding the significance of matrix, consider the strings "cat" and "tata"
 
 consider row 3 and column 1 ==> comparing "t" and "t" is the direct comparision
 But we are actually comparing the PowerSet of "cat" and "t" ie, {"c","a","t","ca","at","cat"} is compared with {"t"}
+
+We first check if a[i] == b[j]
+if the above is true we add 1 to the value of the upper left cell which holds the length of longest substring in a[1..i-1] and 
+b[1..j-1].
+In the subsequence problem, we consider the top and left cells when current characters do not match because the subsequnce can be
+broken. 
+For a continous substring we can not consider left and top cells as they indicate subsequnces.
+
 */

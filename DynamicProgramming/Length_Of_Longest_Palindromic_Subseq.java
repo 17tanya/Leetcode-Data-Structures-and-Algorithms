@@ -1,5 +1,6 @@
 /*
-
+https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/
+https://www.techiedelight.com/longest-palindromic-subsequence-using-dynamic-programming/
 */
 
 /*

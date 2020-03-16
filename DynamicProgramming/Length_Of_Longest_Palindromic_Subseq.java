@@ -85,3 +85,27 @@ public int LPSlength(String A){
 Time Complexity ans Space Complexity - O(n^2)
 */
 
+
+/*
+DYNAMIC PROGRAMMING USING HASHMAP TO MEMOIZE RECURSION
+*/
+
+public int LPSlength(String A, int start, int end, HashMap<String,Integer> map){
+   if(start > end) return 0;
+   else if(start == end) return 1;
+   
+   String key = start+"|"+end;
+   
+   if(!map.containsKey(key)){
+      if(A.charAt(start) == A.charAt(end)) map.put(key, LPSlength(A, start+1, end-1, map) + 2);
+      else map.put(key, Math.max(LPSlength(A, start+1, end, map), LPSlength(A, start, end-1, map)));
+   }
+   return map.get(key);
+}
+
+/*
+Time Complexity - O(n^2)
+*/
+
+
+

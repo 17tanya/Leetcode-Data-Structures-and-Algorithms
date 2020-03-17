@@ -108,7 +108,6 @@ Number of subproblems is dependent on
 */
 
 //RECUSRION USING MEMOIZATION
-//The below approach uses array's suffixes
 
 public boolean isPartition(int A[], int current, int sum, HashMap<String,Boolean> map){
     
@@ -142,7 +141,7 @@ public boolean solvePartition(int A[]){
     //partition not possible
     if(sum % 2 != 0) return false;
     
-    else return isPartition(A,sum/2,n);
+    else return isPartition(A, n, sum/2, map);
 }
 
 /*

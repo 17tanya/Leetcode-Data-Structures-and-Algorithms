@@ -1,6 +1,8 @@
 /*
 https://www.techiedelight.com/0-1-knapsack-problem/
 https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+
+To Do - Print the selected items to be put in the kanpsack
 */
 
 /*

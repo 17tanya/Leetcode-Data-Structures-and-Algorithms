@@ -1,5 +1,0 @@
-/*
-https://www.techiedelight.com/partition-problem/
-https://www.geeksforgeeks.org/partition-problem-dp-18/
-
-*/

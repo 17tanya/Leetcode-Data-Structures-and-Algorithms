@@ -40,6 +40,9 @@ public int longestPathFromACell(int mat[][], int dp[][], int n, int row, int col
     int left = Integer.MIN_VALUE;
     int right = Integer.MIN_VALUE;
     
+    // Since all numbers are unique and in range from 1 to n*n, 
+    // there is atmost one possible direction from any cell 
+  
     //Move down
     if(row+1<n && (mat[row][col]+1 == mat[row+1][col]))
         down = 1 + longestPathFromACell(mat, dp, n, row+1, col);

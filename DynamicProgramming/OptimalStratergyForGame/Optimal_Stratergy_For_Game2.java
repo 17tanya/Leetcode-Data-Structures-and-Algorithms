@@ -33,6 +33,7 @@ public int calcSum(int coins[]){
             dp[i][j] = -1;
         }
     }
+    return game(coins, dp, 0, n-1, sum);
 }
 
 public int game(int coins[], int dp[][], int i, int j, int sum){

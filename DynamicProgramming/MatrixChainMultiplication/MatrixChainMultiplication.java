@@ -127,4 +127,8 @@ public int matrixChain(int dims[]){
     
 }
 
-
+/*
+Time Complexity - O(n^3)
+Number of subproblems - n^2
+Time to solve each subproblem - n
+*/

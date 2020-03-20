@@ -62,7 +62,7 @@ Time Complexity - O(numOfCoins * coinVal)
 Space Complexity - O(numOfCoins * coinVal)
 */
 
-//DYNAMIC PROGRAMMING - SPACE OPTIMIZED
+//DYNAMIC PROGRAMMING - SPACE OPTIMIZED BOTTOM APPROACH
 public int coinChangeWays(int coins[], int coinVal){
     int ways[] = new int[coinVal+1];
     ways[0] = 1;

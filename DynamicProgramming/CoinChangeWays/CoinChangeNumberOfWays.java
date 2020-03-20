@@ -18,7 +18,7 @@ To count the total number of solutions, we can divide all set solutions into two
     
 */
 
-//RECURSIVE SOLUTION
+//RECURSIVE SOLUTION - COUNTS DISTINCT SOLUTION SETS
 
 public int coinChangeWays(int coins[], int index, int coinVal){
 

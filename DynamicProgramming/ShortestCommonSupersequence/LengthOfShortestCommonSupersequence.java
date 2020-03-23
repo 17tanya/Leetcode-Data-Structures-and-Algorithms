@@ -78,6 +78,7 @@ public int scsLength(String X, String Y){
 Time Complexity & Space Complexity - O(n*m)
 */
 
+//SPACE OPTIMIZED DYNAMIC PROGRAMMING - BOTTOM UP
 
 public int scsLength(String X, String Y){
     int n = X.length();
@@ -88,7 +89,8 @@ public int scsLength(String X, String Y){
     
     for(int i=1;i<=n;i++){
         for(int j=0;j<=m;j++){
-            if(X.charAt(i-1) == Y.charAt(j-1)) T[i % 2][j] = T[(i-1) % 2][j-1]+1;
+            if(j==0) T[i % 2][j] = i;
+            else if(X.charAt(i-1) == Y.charAt(j-1)) T[i % 2][j] = T[(i-1) % 2][j-1]+1;
             else T[i % 2][j] = Math.min(T[(i-1) % 2][j], T[i % 2][j-1])+1
         }
     }

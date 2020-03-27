@@ -20,14 +20,16 @@ class Solution{
         int maxArea = 0;
     
         //temporary array used for computation with maxHistogram
-        //we keep adding column values as we move down the rows but reset for if value in A = 0
+        //we keep adding column values as we move down the rows but reset if value in A = 0
         int temp[] = new int[m];
     
         for(int i=0;i<n;i++){
+            
             for(int j=0;j<m;j++){
                 if(A[i][j] == 0) temp[j] = 0;
                 else temp[j]+=A[i][j];
             }
+            
             maxArea = Math.max(maxHistogram(temp), maxArea);
         }
     

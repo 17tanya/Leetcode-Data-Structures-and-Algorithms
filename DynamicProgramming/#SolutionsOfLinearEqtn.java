@@ -54,6 +54,36 @@ public int count(int coeff[], int index, int rhs, HashMap<String, Integer> map){
     
 }
 
+//Bottom up DP
+public int count(int coeff[], int rhs){
+       int numOfCoeff = coeff.length;
+       
+       //dp[i] indicates the number of ways to form a sum, sum = i
+       int dp[] = new int[numOfCoeff+1];
+       dp[0] = 1;
+       
+       /*
+       we consider all coefficients in the range [0...i] when computing dp[]
+       for first interation i = 0 --> only first coeff is considered
+       for second iteration i = 1 --> first two coeficients are considered [0,1]
+       for last interation i = numOfCoeff --> all coefficients are considered
+       
+       We basically answer the question - 
+            #ways to sum up to j when we conisder only the first coefficient?
+            #ways to sum up to j when we conisder the first two coefficients?
+            .....
+            #ways to sum up to RHS when we consider all coefficients
+       */
+       for(int i=0 ; i < numOfCoeff ; i++){
+              for(int j=coeff[i] ; j <= rhs ; j++){
+                    //since we are including coeff[i] in sum = j, we must add #ways to get a sum = (j-coeff[i])
+                     dp[j] += dp[ j - coeff[i] ];
+              }
+       }
+       
+       return dp[rhs];
+}
+
 
 /*
 Time Complexity - O(numberOfCoefficients * RHS)

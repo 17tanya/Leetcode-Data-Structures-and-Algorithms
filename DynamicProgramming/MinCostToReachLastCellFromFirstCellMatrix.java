@@ -3,6 +3,8 @@ https://www.techiedelight.com/find-minimum-cost-reach-last-cell-matrix-first-cel
 
 From the first cell reach the last cell. Each cell has a cost. Minimize total cost.
 Allowed moves - right and bottom --> from (i,j) valid moves are --> (i+1,j) and (i,j+1)
+(Further) - consider diaognal moves as well
+
 
 Optimal substructure - 
 cost to reach(i,j) = cost[i][j] + min( cost to reach(i-1,j), cost to reach(i,j-1) )

@@ -13,7 +13,16 @@ This repository contains solutions to coding problems based on Data Structures a
   - [Print Longest Increasing Subsequence](DynamicProgramming/LongestIncreasingSubsequence/Find_Longest_Increasing_Subsequence.java)
   - [Length Of Longest Palindromic Subsequence](DynamicProgramming/LongestPalindromicSubsequence/LengthOfLongestPalindromicSubseq.java)
   - [Longest Path in a Matrix With Given Constraints](DynamicProgramming/LongestPathInMatrixconstraints/LongestPathInMatrixWithConstraints.java)
-  - []
+  - [Matrix Chain Multiplication](DynamicProgramming/MatrixChainMultiplication/MatrixChainMultiplication.java)
+  - [Minimum Sum Partition](DynamicProgramming/MinimumSumPartition/MinimumSumPartition.java)
+  - [Optimal Stratergy For a Game](DynamicProgramming/OptimalStratergyForGame/Optimal_Stratergy_For_Game.java)
+  - [Partition Problem](DynamicProgramming/PartitionProblem/PartitionProblem[ReturnBoolean].java)
+  - [Length of Shortest Common Supersequence](DynamicProgramming/ShortestCommonSupersequence/LengthOfShortestCommonSupersequence.java)
+  - [Print Shortest Common Supersequence](DynamicProgramming/ShortestCommonSupersequence/PrintShortestCommonSupersequence.java)
+  - [Subset Sum Problem](DynamicProgramming/SubsetSumProblem/SubsetSumProblem.java)
+  - [Word Break Problem - Return Boolean](DynamicProgramming/WordBreakProblem/WordBreakBoolean.java)
+  - [Word Break Problem - Print all Possible Word Breaks - Recursion](DynamicProgramming/WordBreakProblem/WordBreakPrintWords.java)
+  - [Word Break Problem - Print all Possible Word Breaks - DP](DynamicProgramming/WordBreakProblem/[Optimized]WordBreakPrintWords.java)
 ## Graphs, DFS & BFS
   - [Leetcode 547. Friend Circles](GraphsDFS&BFS/Friend_Circles.java)
   - [Leetcode 200. Number of Islands](GraphsDFS&BFS/Number_of_Islands.java)

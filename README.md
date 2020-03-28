@@ -1,4 +1,4 @@
-# Leetcode / Data-Structures-and-Algorithms :sparkles:
+# :fire: Leetcode / Data-Structures-and-Algorithms :fire:
 This repository contains solutions to coding problems based on Data Structures and Algorithms. It aims to help people understand the application of DSA concepts in questions. :rocket:
 ## :pushpin: Dynamic Programming
   - [MIT 6.006 Dynamic Programming](DynamicProgramming/MIT-6.006-IntroToAlgosNotes/)

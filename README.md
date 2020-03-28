@@ -1,5 +1,19 @@
 # Leetcode / Data-Structures-and-Algorithms
 This repository contains solutions to coding problems based on Data Structures and Algorithms.
+## Dynamic Programming
+  - [MIT 6.006 Dynamic Programming](DynamicProgramming/MIT-6.006-IntroToAlgosNotes/)
+  - [Number of Ways to Change Coin(Unlimited Supply of Coins)](DynamicProgramming/CoinChangeWays/CoinChangeNumberOfWays.java)
+  - [Dice Throw](DynamicProgramming/DiceThrow/DiceThrow.java)
+  - [Print Longest Common Subsequence](DynamicProgramming/LongestCommonSubsequence/Find_Longest_Common_Subsequence.java)
+  - [Length of Longest Common Subsequence](DynamicProgramming/LongestCommonSubsequence/Length_Of_Longest_Common_Subsequence.java)
+  - [Length of Longest Common Substring](DynamicProgramming/LongestCommonSubstring/Length_Of_Longest_Common_Substring.java)
+  - [Print Longest Common Substring](DynamicProgramming/LongestCommonSubstring/Find_Longest_Common_Substring.java)
+  - [Longest Increasing Path in a Matrix](DynamicProgramming/LongestIncreasingPathInMatrix/LongestIncreasingPathInMatrix.java)
+  - [Length of Longest Increasing Subsequence](DynamicProgramming/LongestIncreasingSubsequence/Length_Of_Longest_Increasing_Subsequence.java)
+  - [Print Longest Increasing Subsequence](DynamicProgramming/LongestIncreasingSubsequence/Find_Longest_Increasing_Subsequence.java)
+  - [Length Of Longest Palindromic Subsequence](DynamicProgramming/LongestPalindromicSubsequence/LengthOfLongestPalindromicSubseq.java)
+  - [Longest Path in a Matrix With Given Constraints](DynamicProgramming/LongestPathInMatrixconstraints/LongestPathInMatrixWithConstraints.java)
+  - []
 ## Graphs, DFS & BFS
   - [Leetcode 547. Friend Circles](GraphsDFS&BFS/Friend_Circles.java)
   - [Leetcode 200. Number of Islands](GraphsDFS&BFS/Number_of_Islands.java)

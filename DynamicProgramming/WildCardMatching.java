@@ -1,5 +1,6 @@
 /*
 https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/WildCardMatching.java
+https://www.techiedelight.com/wildcard-pattern-matching/
 
 Implement wildcard pattern matching with support for '?' and '*'
 '?' matches any single character

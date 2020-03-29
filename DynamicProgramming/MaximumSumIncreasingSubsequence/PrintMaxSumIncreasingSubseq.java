@@ -44,6 +44,6 @@ public void printMaxSumIncreasingSubseq(int A[]){
 }
 
 /*
-Time Complexity - O(n^2)
+Time & Space Complexity - O(n^2)
 */
 

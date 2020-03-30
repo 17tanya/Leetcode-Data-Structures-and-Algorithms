@@ -37,7 +37,7 @@ public int minCutsPlainPartition(String s, boolean isPlain[][]){
     //cuts[i] indicates the minimum cuts required in s[0...i] to form palindrome partition
     int cuts[] = new int[n];
     
-    for(int i=0;i<n;i++){
+    for(int i=0 ; i < n ; i++){
         //check if the current substring is partition --> if it is a palindrome we need 0 cuts
         if(isPlain[0][i]) cuts[i] = 0;
         else{
@@ -47,7 +47,7 @@ public int minCutsPlainPartition(String s, boolean isPlain[][]){
             //since we need to make palindromic partitions, we check if the 2nd substring s[j+1...i] is a palindrome or not
             //we are basically CHOOSING A PARTITION(j) WHICH KEEPS THE 2nd SUBSTRING AS IT IS(bacuse it is a palindrome) AND 
             //DECOMPOSES THE 1ST SUBSTRING INTO SUBPROBLEMS TO FIND MINIMUM CUTS
-            for(int j=0;j<i;j++){ //j creates the partition
+            for(int j=0 ; j < i ; j++){ //j creates the partition
             
                 //1. Check if 2nd substring is a palindrome
                 //2. solve the subproblem --> we are using the bottom up appraoch, subproblem is already solved

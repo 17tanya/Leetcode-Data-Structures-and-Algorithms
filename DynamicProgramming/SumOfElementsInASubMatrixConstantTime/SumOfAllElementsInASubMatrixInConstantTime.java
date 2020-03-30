@@ -43,7 +43,7 @@ class SubMatrix{
     }
     
     public int computeQueries(int p, int q, int r, int s){
-        //(p,q) --> top left and (r,s) --> right left
+        //(p,q) --> top left and (r,s) --> bottom right
         
         int result = sum[r][s];
         

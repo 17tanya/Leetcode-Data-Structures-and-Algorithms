@@ -5,7 +5,7 @@ The problem is a modification of Longest Common Subsequence Problem. Here, we ta
 
 The Recurrence is almost the same as LCS - 
 LRS[i][j] = 0                               if i = 0 || j = 0
-          = LRS[i-1][j-1]                   if (i != j) && s[i] == s[j]
+          = LRS[i-1][j-1] + 1               if (i != j) && s[i] == s[j]
           = max(LRS[i-1][j], LRS[i][j-1])   if s[i] != s[j]
 i and j can not have the same index as they represent the indixes of the same string. 
 

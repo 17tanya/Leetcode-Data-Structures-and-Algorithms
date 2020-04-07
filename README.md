@@ -90,6 +90,9 @@ This repository contains solutions to coding problems based on Data Structures a
 ## :pushpin: Arrays
   - [Leetcode 48. Rotate Image](Arrays/Rotate_Image.java)
   - [Leetcode 41. First Missing Positive](Arrays/First_Missing_Positive.java)
-  
- ## Submission For Google Hash Code 2020 Online Qualification Round
+## :pushpin: Competitions
+ ### Submission For Google Code Jam Qualification Round 2020
+ [Google Code Jam 2020 Solutions](https://github.com/17tanya/Leetcode-Data-Structures-and-Algorithms/tree/master/Google-Code-Jam-QualificationRound-2020)
+ 
+ ### Submission For Google Hash Code 2020 Online Qualification Round
  [Google Hash Code 2020 Submission](Google_Hash_Code_2020.java)

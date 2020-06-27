@@ -28,7 +28,7 @@ class Solution {
                 
                 helper(s, i+1, l, res);
                 
-                //backtarck - undo the partition
+                //backtrack - undo the partition
                 l.remove(l.size()-1);
             }
         }

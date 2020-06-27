@@ -20,9 +20,15 @@ class Solution {
         //recursion to see if it is possible to break down the remaining string into
         //palindromic substrings or not.
         for(int i = index ; i < s.length() ; i++){
+            //check if the current substring is a palindrome or not
             if(isPalin(s, index, i)){
+                
+                //make a partition
                 l.add(s.substring(index, i+1));
+                
                 helper(s, i+1, l, res);
+                
+                //backtarck - undo the partition
                 l.remove(l.size()-1);
             }
         }

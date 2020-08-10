@@ -150,7 +150,7 @@ public int lastOccurrenceLesserThanKey(int arr[],int target){
     while(low<=high){
         int mid = low + (high-low+1)/2;
         if(arr[mid] < target){
-            ans = mid;
+            result = mid;
             low = mid + 1; //to find last index push right
         }
         else if(arr[mid] > target){
